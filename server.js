@@ -269,18 +269,18 @@ app.post('/api/contact', formLimiter, upload.none(), contactValidation, async (r
             const customerMailOptions = {
                 from: process.env.SMTP_USER || 'info@huanboworld.com',
                 to: contact.includes('@') ? contact : null,
-                subject: '感谢您的咨询 - 环博物流',
+                subject: '感谢您的咨询 - 环舶物流',
                 html: `
                     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
                         <div style="text-align: center; margin-bottom: 30px;">
-                            <h1 style="color: #2c5282; font-size: 28px;">环博物流</h1>
+                            <h1 style="color: #2c5282; font-size: 28px;">环舶物流</h1>
                             <p style="color: #718096;">专业的国际货运与进出口服务</p>
                         </div>
                         
                         <h2 style="color: #2d3748;">尊敬的 ${name}，您好！</h2>
                         
                         <p style="line-height: 1.6; color: #4a5568;">
-                            感谢您选择环博物流！我们已经收到您的咨询信息，我们的专业团队会在24小时内与您联系，为您提供最优质的物流解决方案。
+                            感谢您选择环舶物流！我们已经收到您的咨询信息，我们的专业团队会在24小时内与您联系，为您提供最优质的物流解决方案。
                         </p>
                         
                         <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #2c5282;">
@@ -401,7 +401,7 @@ app.use((error, req, res, next) => {
 
 // 启动服务器
 app.listen(PORT, () => {
-    console.log(`🚀 环博物流网站服务器启动成功!`);
+    console.log(`🚀 环舶物流网站服务器启动成功!`);
     console.log(`📡 服务器地址: http://localhost:${PORT}`);
     console.log(`🌍 环境: ${process.env.NODE_ENV || 'development'}`);
     console.log(`⏰ 启动时间: ${new Date().toLocaleString('zh-CN')}`);

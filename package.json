@@ -1,7 +1,7 @@
 {
   "name": "huanboworld-website",
   "version": "1.0.0",
-  "description": "环博物流公司官方网站 - 专业的国际货运与进出口服务",
+  "description": "环舶物流公司官方网站 - 专业的国际货运与进出口服务",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -18,7 +18,7 @@
     "export",
     "customs"
   ],
-  "author": "环博物流 <info@huanboworld.com>",
+  "author": "环舶物流 <info@huanboworld.com>",
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
