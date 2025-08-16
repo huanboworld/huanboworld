@@ -31,7 +31,7 @@ app.use(helmet({
 // CORS配置
 app.use(cors({
     origin: process.env.NODE_ENV === 'production' 
-        ? ['https://www.huanbo-logistics.com', 'https://huanbo-logistics.com']
+        ? ['https://www.huanboworld.com', 'https://huanboworld.com']
         : ['http://localhost:3000', 'http://127.0.0.1:3000'],
     credentials: true
 }));
@@ -80,7 +80,7 @@ const createTransporter = () => {
         port: process.env.SMTP_PORT || 587,
         secure: false,
         auth: {
-            user: process.env.SMTP_USER || 'info@huanbo-logistics.com',
+            user: process.env.SMTP_USER || 'info@huanboworld.com',
             pass: process.env.SMTP_PASS || 'your-email-password'
         }
     });
@@ -235,8 +235,8 @@ app.post('/api/contact', formLimiter, upload.none(), contactValidation, async (r
             
             // 给公司发送通知邮件
             const companyMailOptions = {
-                from: process.env.SMTP_USER || 'info@huanbo-logistics.com',
-                to: process.env.COMPANY_EMAIL || 'info@huanbo-logistics.com',
+                from: process.env.SMTP_USER || 'info@huanboworld.com',
+                to: process.env.COMPANY_EMAIL || 'info@huanboworld.com',
                 subject: `【新客户咨询】来自 ${name} 的物流需求`,
                 html: `
                     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -267,7 +267,7 @@ app.post('/api/contact', formLimiter, upload.none(), contactValidation, async (r
 
             // 给客户发送确认邮件
             const customerMailOptions = {
-                from: process.env.SMTP_USER || 'info@huanbo-logistics.com',
+                from: process.env.SMTP_USER || 'info@huanboworld.com',
                 to: contact.includes('@') ? contact : null,
                 subject: '感谢您的咨询 - 环博物流',
                 html: `
@@ -293,7 +293,7 @@ app.post('/api/contact', formLimiter, upload.none(), contactValidation, async (r
                         <div style="background: white; padding: 20px; border: 1px solid #e2e8f0; border-radius: 8px; margin: 20px 0;">
                             <h3 style="color: #2d3748; margin-top: 0;">联系我们</h3>
                             <p><strong>客服电话:</strong> +86 400-123-4567</p>
-                            <p><strong>邮箱:</strong> info@huanbo-logistics.com</p>
+                            <p><strong>邮箱:</strong> info@huanboworld.com</p>
                             <p><strong>地址:</strong> 上海市浦东新区物流大道123号</p>
                             <p><strong>营业时间:</strong> 周一至周日 8:00-20:00</p>
                         </div>

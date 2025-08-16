@@ -60,7 +60,7 @@ HuanboWorld/
 
 1. **克隆项目**
    ```bash
-   git clone https://github.com/huanbo-logistics/website.git
+   git clone https://github.com/huanboworld/website.git
    cd website
    ```
 
@@ -108,7 +108,7 @@ SMTP_USER=your-email@example.com
 SMTP_PASS=your-email-password
 
 # 公司接收邮箱
-COMPANY_EMAIL=info@huanbo-logistics.com
+COMPANY_EMAIL=info@huanboworld.com
 
 # 管理员令牌
 ADMIN_TOKEN=your-secret-token
@@ -168,7 +168,7 @@ pm2 save
 ```nginx
 server {
     listen 80;
-    server_name www.huanbo-logistics.com huanbo-logistics.com;
+    server_name www.huanboworld.com huanboworld.com;
     
     # 重定向到 HTTPS
     return 301 https://$server_name$request_uri;
@@ -176,7 +176,7 @@ server {
 
 server {
     listen 443 ssl http2;
-    server_name www.huanbo-logistics.com huanbo-logistics.com;
+    server_name www.huanboworld.com huanboworld.com;
     
     # SSL 证书配置
     ssl_certificate /path/to/certificate.crt;
@@ -212,7 +212,7 @@ server {
 sudo apt-get install certbot python3-certbot-nginx
 
 # 获取证书
-sudo certbot --nginx -d www.huanbo-logistics.com -d huanbo-logistics.com
+sudo certbot --nginx -d www.huanboworld.com -d huanboworld.com
 
 # 设置自动续期
 sudo crontab -e
@@ -375,9 +375,9 @@ A: 优化建议：
 
 如需技术支持，请通过以下方式联系：
 
-- **邮箱**: tech@huanbo-logistics.com
+- **邮箱**: tech@huanboworld.com
 - **电话**: +86 400-123-4567
-- **GitHub Issues**: https://github.com/huanbo-logistics/website/issues
+- **GitHub Issues**: https://github.com/huanboworld/website/issues
 
 ## 版权信息
 
