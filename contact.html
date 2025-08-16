@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - 环博物流专业客服团队为您服务</title>
+    <meta name="description" content="联系环博物流获取专业的货运咨询服务。我们的客服团队7×24小时为您提供支持，立即提交需求获取定制化物流解决方案。">
+    <meta name="keywords" content="联系环博物流,货运咨询,物流报价,客服电话,在线留言,物流需求">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>环博物流</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">首页</a>
+                </li>
+                <li class="nav-item">
+                    <a href="services.html" class="nav-link">服务项目</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">关于我们</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">联系我们</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 页面标题区域 -->
+    <section class="page-header">
+        <div class="container">
+            <h1>联系我们</h1>
+            <p>专业的客服团队随时为您提供咨询服务</p>
+        </div>
+    </section>
+
+    <!-- 联系方式信息 -->
+    <section class="contact-info">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>联系电话</h3>
+                    <p>24小时客服热线</p>
+                    <a href="tel:+86-400-123-4567" class="contact-link">+86 400-123-4567</a>
+                    <small>工作时间：周一至周日 8:00-20:00</small>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>邮箱地址</h3>
+                    <p>发送邮件获取详细报价</p>
+                    <a href="mailto:info@huanbo-logistics.com" class="contact-link">info@huanbo-logistics.com</a>
+                    <small>我们会在24小时内回复您的邮件</small>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>公司地址</h3>
+                    <p>欢迎到访我们的办公室</p>
+                    <address class="contact-link">
+                        上海市浦东新区物流大道123号<br>
+                        环博大厦15楼
+                    </address>
+                    <small>地铁2号线陆家嘴站3号出口</small>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>营业时间</h3>
+                    <p>我们的服务时间</p>
+                    <div class="contact-link">
+                        周一至周五：8:00-18:00<br>
+                        周六至周日：9:00-17:00
+                    </div>
+                    <small>节假日客服值班，正常提供服务</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 在线留言表单 -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h2>在线留言咨询</h2>
+                    <p>请填写以下信息，我们会尽快与您联系并提供专业的物流解决方案</p>
+                </div>
+                
+                <form id="contact-form" class="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">
+                                <i class="fas fa-user"></i>
+                                姓名 <span class="required">*</span>
+                            </label>
+                            <input type="text" id="name" name="name" required placeholder="请输入您的姓名">
+                        </div>
+                        <div class="form-group">
+                            <label for="company">
+                                <i class="fas fa-building"></i>
+                                公司名称
+                            </label>
+                            <input type="text" id="company" name="company" placeholder="请输入公司名称（选填）">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contact">
+                                <i class="fas fa-phone"></i>
+                                联系方式 <span class="required">*</span>
+                            </label>
+                            <input type="text" id="contact" name="contact" required placeholder="请输入手机号码或邮箱地址">
+                        </div>
+                        <div class="form-group">
+                            <label for="service-type">
+                                <i class="fas fa-list"></i>
+                                服务类型
+                            </label>
+                            <select id="service-type" name="service-type">
+                                <option value="">请选择服务类型</option>
+                                <option value="海运">海运服务</option>
+                                <option value="空运">空运服务</option>
+                                <option value="陆运">陆运服务</option>
+                                <option value="清关">清关代理</option>
+                                <option value="仓储">仓储配送</option>
+                                <option value="综合">综合物流方案</option>
+                                <option value="其他">其他服务</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="cargo-type">
+                                <i class="fas fa-boxes"></i>
+                                货物类型
+                            </label>
+                            <input type="text" id="cargo-type" name="cargo-type" placeholder="例如：电子产品、纺织品、机械设备等">
+                        </div>
+                        <div class="form-group">
+                            <label for="destination">
+                                <i class="fas fa-globe"></i>
+                                目的地
+                            </label>
+                            <input type="text" id="destination" name="destination" placeholder="请输入货物目的地">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">
+                            <i class="fas fa-comment-alt"></i>
+                            详细需求描述 <span class="required">*</span>
+                        </label>
+                        <textarea id="message" name="message" required rows="6" placeholder="请详细描述您的物流需求，包括：
+• 货物详细信息（重量、尺寸、数量等）
+• 起运地和目的地
+• 时效要求
+• 特殊要求（如温控、危险品等）
+• 其他需要说明的事项
+
+我们会根据您的需求提供最合适的物流解决方案和准确报价。"></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="privacy-agreement" name="privacy-agreement" required>
+                            <span class="checkmark"></span>
+                            我已阅读并同意 <a href="#" class="privacy-link">《隐私政策》</a> 和 <a href="#" class="terms-link">《服务条款》</a>
+                        </label>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <i class="fas fa-paper-plane"></i>
+                            提交咨询
+                        </button>
+                        <button type="reset" class="btn btn-secondary btn-large">
+                            <i class="fas fa-redo"></i>
+                            重置表单
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 快速联系方式 -->
+    <section class="quick-contact">
+        <div class="container">
+            <h2>其他联系方式</h2>
+            <div class="quick-contact-grid">
+                <div class="quick-contact-item">
+                    <i class="fab fa-wechat"></i>
+                    <h3>微信客服</h3>
+                    <p>扫码添加客服微信</p>
+                    <div class="qr-code">
+                        <img src="https://via.placeholder.com/120x120/2c5282/FFFFFF?text=WeChat+QR" alt="微信二维码">
+                    </div>
+                </div>
+                <div class="quick-contact-item">
+                    <i class="fab fa-qq"></i>
+                    <h3>QQ咨询</h3>
+                    <p>在线QQ客服</p>
+                    <a href="tencent://message/?uin=123456789" class="contact-link">123456789</a>
+                    <small>工作时间在线咨询</small>
+                </div>
+                <div class="quick-contact-item">
+                    <i class="fas fa-comments"></i>
+                    <h3>在线客服</h3>
+                    <p>网站在线客服系统</p>
+                    <button class="btn btn-primary btn-chat" onclick="openChat()">
+                        开始对话
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 地图区域 -->
+    <section class="map-section">
+        <div class="container">
+            <h2>办公地址</h2>
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p>地图区域</p>
+                    <small>（可集成真实地图API，如百度地图、高德地图等）</small>
+                </div>
+                <div class="address-info">
+                    <h3>环博物流总部</h3>
+                    <div class="address-details">
+                        <div class="address-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>上海市浦东新区物流大道123号环博大厦15楼</span>
+                        </div>
+                        <div class="address-item">
+                            <i class="fas fa-subway"></i>
+                            <span>地铁2号线陆家嘴站3号出口，步行5分钟</span>
+                        </div>
+                        <div class="address-item">
+                            <i class="fas fa-bus"></i>
+                            <span>公交线路：81路、82路、583路到物流大道站</span>
+                        </div>
+                        <div class="address-item">
+                            <i class="fas fa-car"></i>
+                            <span>自驾车辆可停放在大厦地下停车场</span>
+                        </div>
+                    </div>
+                    <div class="office-hours">
+                        <h4>接待时间</h4>
+                        <p>周一至周五：9:00-17:30<br>周六至周日：预约接待</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>常见问题</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> 如何获取货运报价？</h3>
+                    <p>您可以通过填写在线表单、致电客服热线或发送邮件的方式联系我们。我们会根据您的货物信息和运输要求提供详细报价。</p>
+                </div>
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> 货物运输需要多长时间？</h3>
+                    <p>运输时间取决于运输方式和目的地。海运通常需要15-45天，空运需要3-7天，我们会根据您的时效要求推荐最合适的运输方案。</p>
+                </div>
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> 是否提供货物保险服务？</h3>
+                    <p>是的，我们提供全程货物保险服务。可以根据货物价值和风险程度选择不同的保险方案，确保您的货物安全。</p>
+                </div>
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> 如何跟踪货物运输状态？</h3>
+                    <p>我们提供实时货物跟踪系统，您可以通过运单号在我们的网站或客服系统中查询货物的实时位置和运输状态。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>环博物流</h3>
+                    <p>专业的国际货运与进出口服务提供商，致力于为客户提供高效、安全、可靠的物流解决方案。</p>
+                </div>
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <ul>
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="services.html">服务项目</a></li>
+                        <li><a href="about.html">关于我们</a></li>
+                        <li><a href="contact.html">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>联系信息</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +86 400-123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@huanbo-logistics.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 上海市浦东新区物流大道123号</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>关注我们</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-wechat"></i></a>
+                        <a href="#"><i class="fab fa-weibo"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 环博物流. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // 在线客服功能
+        function openChat() {
+            alert('在线客服功能正在开发中，请通过其他方式联系我们！');
+            // 这里可以集成真实的在线客服系统
+        }
+    </script>
+</body>
+</html>
