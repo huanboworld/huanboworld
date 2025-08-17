@@ -1,120 +1,239 @@
-/* 全局样式重置 */
+/* GlobalTranz风格重置 */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* 全局样式 */
+/* GlobalTranz风格设计系统 */
+:root {
+    /* 专业物流配色方案 - 基于GlobalTranz */
+    --primary-navy: #1a2332;
+    --primary-blue: #2563eb;
+    --primary-blue-light: #3b82f6;
+    --primary-blue-dark: #1d4ed8;
+    --accent-orange: #f59e0b;
+    --accent-green: #10b981;
+    --accent-red: #ef4444;
+    
+    /* 中性色系 */
+    --neutral-50: #f8fafc;
+    --neutral-100: #f1f5f9;
+    --neutral-200: #e2e8f0;
+    --neutral-300: #cbd5e1;
+    --neutral-400: #94a3b8;
+    --neutral-500: #64748b;
+    --neutral-600: #475569;
+    --neutral-700: #334155;
+    --neutral-800: #1e293b;
+    --neutral-900: #0f172a;
+    --white: #ffffff;
+    
+    /* 阴影系统 */
+    --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    
+    /* 边框圆角 */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 24px;
+    --radius-full: 9999px;
+    
+    /* 动画 */
+    --transition-fast: all 0.15s ease-out;
+    --transition-base: all 0.3s ease-out;
+    --transition-slow: all 0.5s ease-out;
+    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 body {
-    font-family: 'Noto Sans SC', sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Noto Sans SC', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: var(--neutral-700);
     overflow-x: hidden;
+    background-color: var(--white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 }
 
+/* 现代化容器 */
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 24px;
 }
 
+/* GlobalTranz风格按钮系统 */
 .btn {
-    display: inline-block;
-    padding: 12px 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: 500;
-    transition: all 0.3s ease;
+    border-radius: var(--radius-lg);
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 1.2;
+    transition: var(--transition-base);
     border: 2px solid transparent;
     cursor: pointer;
-    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    min-height: 48px;
+    text-transform: none;
+    letter-spacing: 0;
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #2c5282, #3182ce);
-    color: white;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+    color: var(--white);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-blue);
 }
 
 .btn-primary:hover {
-    background: linear-gradient(135deg, #2a4365, #2c5282);
+    background: linear-gradient(135deg, var(--primary-blue-dark), var(--primary-blue));
     transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(44, 82, 130, 0.3);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--white);
+    border-color: var(--white);
+    backdrop-filter: blur(10px);
+}
+
+.btn-outline:hover {
+    background: var(--white);
+    color: var(--primary-navy);
+    border-color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
 }
 
 .btn-secondary {
-    background: transparent;
-    color: #2c5282;
-    border: 2px solid #2c5282;
+    background: var(--white);
+    color: var(--primary-blue);
+    border-color: var(--neutral-300);
+    box-shadow: var(--shadow-sm);
 }
 
 .btn-secondary:hover {
-    background: #2c5282;
-    color: white;
+    background: var(--neutral-50);
+    border-color: var(--primary-blue);
     transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
-/* 导航栏样式 */
+.btn-large {
+    padding: 16px 32px;
+    font-size: 16px;
+    min-height: 56px;
+    border-radius: var(--radius-xl);
+}
+
+.btn i {
+    font-size: 14px;
+}
+
+/* GlobalTranz风格导航栏 */
 .navbar {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
+    background: var(--primary-navy);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    transition: var(--transition-base);
+    box-shadow: var(--shadow-lg);
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 32px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 72px;
 }
 
 .nav-logo h2 {
-    color: #2c5282;
+    color: var(--white);
     font-weight: 700;
     font-size: 28px;
+    letter-spacing: -0.02em;
+    position: relative;
+}
+
+.nav-logo h2::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 24px;
+    background: linear-gradient(180deg, var(--accent-orange), var(--accent-green));
+    border-radius: var(--radius-sm);
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 8px;
+    align-items: center;
 }
 
 .nav-link {
     text-decoration: none;
-    color: #333;
+    color: var(--neutral-300);
     font-weight: 500;
-    font-size: 16px;
-    transition: color 0.3s ease;
+    font-size: 15px;
+    transition: var(--transition-base);
     position: relative;
+    padding: 12px 20px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
-.nav-link:hover,
+.nav-link:hover {
+    color: var(--white);
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+}
+
 .nav-link.active {
-    color: #2c5282;
+    color: var(--white);
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+    box-shadow: var(--shadow-md);
 }
 
-.nav-link::after {
+.nav-link.active::before {
     content: '';
     position: absolute;
-    bottom: -5px;
+    top: 0;
     left: 0;
-    width: 0;
-    height: 2px;
-    background: #2c5282;
-    transition: width 0.3s ease;
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-    width: 100%;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+    border-radius: var(--radius-md);
 }
 
 .hamburger {
@@ -131,131 +250,258 @@ body {
     transition: 0.3s;
 }
 
-/* 主横幅区域 */
+/* GlobalTranz风格Hero区域 */
 .hero {
-    background: linear-gradient(135deg, #1a365d, #2c5282);
+    position: relative;
     min-height: 100vh;
     display: flex;
     align-items: center;
-    position: relative;
     overflow: hidden;
+    margin-top: 72px;
 }
 
-.hero::before {
-    content: '';
+.hero-background {
     position: absolute;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.1)" points="0,1000 1000,0 1000,1000"/></svg>');
-    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(26, 35, 50, 0.85) 0%,
+        rgba(30, 41, 59, 0.75) 50%,
+        rgba(37, 99, 235, 0.15) 100%
+    );
+    z-index: 2;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 3;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    width: 100%;
 }
 
 .hero-content {
-    flex: 1;
-    max-width: 600px;
-    margin-left: 80px;
-    z-index: 2;
-    position: relative;
+    max-width: 800px;
+    color: var(--white);
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 16px;
+    background: rgba(245, 158, 11, 0.2);
+    border: 1px solid var(--accent-orange);
+    border-radius: var(--radius-full);
+    color: var(--accent-orange);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 24px;
+    backdrop-filter: blur(10px);
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 20px;
-    line-height: 1.2;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+}
+
+.hero-content h1 .highlight {
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .hero-content p {
-    font-size: 1.3rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 30px;
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: var(--neutral-200);
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.hero-stats {
+    display: flex;
+    gap: 48px;
+    margin-bottom: 48px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--white), var(--neutral-200));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 14px;
+    color: var(--neutral-300);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .hero-buttons {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-}
-
-.hero-image {
-    flex: 1;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    z-index: 2;
-    position: relative;
 }
 
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 15px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-}
-
-/* 服务概览区域 */
+/* GlobalTranz风格服务概览区域 */
 .services-overview {
-    padding: 100px 0;
-    background: #f8fafc;
+    padding: 120px 0;
+    background: var(--neutral-50);
 }
 
 .services-overview h2 {
     text-align: center;
-    font-size: 2.5rem;
-    color: #2d3748;
-    margin-bottom: 60px;
-    font-weight: 600;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: var(--neutral-900);
+    margin-bottom: 16px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.services-overview h2 + p {
+    text-align: center;
+    font-size: 1.125rem;
+    color: var(--neutral-600);
+    margin-bottom: 80px;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+    line-height: 1.7;
 }
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 24px;
 }
 
 .service-card {
-    background: white;
-    padding: 40px 30px;
-    border-radius: 15px;
-    text-align: center;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: var(--white);
+    padding: 40px 32px;
+    border-radius: var(--radius-2xl);
+    text-align: left;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--neutral-200);
+    transition: var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-orange), var(--accent-green), var(--primary-blue));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: var(--transition-base);
 }
 
 .service-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--neutral-300);
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
 }
 
 .service-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, #2c5282, #3182ce);
-    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+    border-radius: var(--radius-xl);
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 25px;
+    margin-bottom: 24px;
+    position: relative;
+    transition: var(--transition-base);
+}
+
+.service-card:hover .service-icon {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, var(--accent-orange), var(--accent-green));
 }
 
 .service-icon i {
-    font-size: 35px;
-    color: white;
+    font-size: 28px;
+    color: var(--white);
 }
 
 .service-card h3 {
-    font-size: 1.5rem;
-    color: #2d3748;
-    margin-bottom: 15px;
-    font-weight: 600;
+    font-size: 1.375rem;
+    color: var(--neutral-900);
+    margin-bottom: 12px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
 }
 
 .service-card p {
-    color: #718096;
-    line-height: 1.7;
+    color: var(--neutral-600);
+    line-height: 1.6;
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.service-card .service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    transition: var(--transition-base);
+}
+
+.service-card .service-link:hover {
+    color: var(--primary-blue-dark);
+    gap: 8px;
 }
 
 /* 为什么选择我们区域 */
@@ -1817,4 +2063,111 @@ body {
 .faq-item p {
     color: #4a5568;
     line-height: 1.6;
+}
+
+/* ========================================
+   GlobalTranz风格移动端响应式优化
+   ======================================== */
+
+/* 移动端Hero区域优化 */
+@media (max-width: 768px) {
+    .hero {
+        margin-top: 64px !important;
+        min-height: 90vh;
+    }
+    
+    .hero-container {
+        padding: 0 20px !important;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2rem, 8vw, 3rem) !important;
+        margin-bottom: 20px !important;
+    }
+    
+    .hero-content p {
+        font-size: 1.125rem !important;
+        margin-bottom: 32px !important;
+    }
+
+    .hero-badge {
+        font-size: 12px !important;
+        padding: 6px 12px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .hero-stats {
+        flex-direction: column !important;
+        gap: 24px !important;
+        margin-bottom: 40px !important;
+        text-align: center !important;
+    }
+    
+    .stat-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .stat-number {
+        font-size: 2rem !important;
+    }
+
+    .hero-buttons {
+        flex-direction: column !important;
+        gap: 16px !important;
+        align-items: stretch !important;
+    }
+    
+    .btn-large {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    /* 导航栏移动端升级 */
+    .nav-container {
+        padding: 0 20px !important;
+        height: 64px !important;
+    }
+    
+    .nav-logo h2 {
+        font-size: 24px !important;
+    }
+    
+    .hamburger .bar {
+        background: var(--white) !important;
+    }
+    
+    .nav-menu {
+        background: var(--primary-navy) !important;
+        top: 64px !important;
+        height: calc(100vh - 64px) !important;
+    }
+}
+
+/* 小屏手机优化 */
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: clamp(1.75rem, 7vw, 2.5rem) !important;
+    }
+    
+    .hero-content p {
+        font-size: 1rem !important;
+    }
+    
+    .services-overview h2 {
+        font-size: clamp(1.5rem, 6vw, 2rem) !important;
+    }
+    
+    .service-card {
+        padding: 24px 20px !important;
+    }
+    
+    .stat-number {
+        font-size: 1.75rem !important;
+    }
+    
+    .hero-container {
+        padding: 0 16px !important;
+    }
 }

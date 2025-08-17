@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
@@ -41,18 +41,42 @@
         </div>
     </nav>
 
-    <!-- 主横幅区域 -->
+    <!-- 主横幅区域 - GlobalTranz风格 -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>全球货运解决方案</h1>
-            <p>专业的国际物流服务，为您的贸易发展保驾护航</p>
-            <div class="hero-buttons">
-                <a href="services.html" class="btn btn-primary">了解服务</a>
-                <a href="contact.html" class="btn btn-secondary">立即咨询</a>
-            </div>
+        <div class="hero-background">
+            <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="全球物流网络">
+            <div class="hero-overlay"></div>
         </div>
-        <div class="hero-image">
-            <img src="img/landing.png" alt="货运集装箱">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">全球物流领先者</div>
+                <h1>连接世界每一个角落的<span class="highlight">智能物流</span></h1>
+                <p>凭借遍布全球的物流网络和先进的技术平台，为您提供端到端的供应链解决方案，让货物运输更快速、更安全、更可靠。</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">1000+</span>
+                        <span class="stat-label">全球合作伙伴</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">覆盖国家</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">99.8%</span>
+                        <span class="stat-label">准时交付率</span>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="services.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-rocket"></i>
+                        立即开始
+                    </a>
+                    <a href="contact.html" class="btn btn-outline btn-large">
+                        <i class="fas fa-phone"></i>
+                        咨询报价
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -60,34 +84,47 @@
     <section class="services-overview">
         <div class="container">
             <h2>我们的核心服务</h2>
+            <p>为全球客户提供专业、高效、安全的一站式物流解决方案</p>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-ship"></i>
                     </div>
                     <h3>海运服务</h3>
-                    <p>提供全球海运整箱、拼箱服务，覆盖全球主要港口，安全可靠，价格优惠。</p>
+                    <p>覆盖全球主要港口的海运网络，提供FCL整箱和LCL拼箱服务，专业团队确保货物安全运输。</p>
+                    <a href="services.html#ocean-freight" class="service-link">
+                        了解更多 <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-plane"></i>
                     </div>
                     <h3>空运服务</h3>
-                    <p>快速的国际空运服务，适合时效要求高的货物，全程跟踪，安全保障。</p>
+                    <p>快速可靠的国际空运解决方案，适合高价值和时效性货物，提供门到门全程跟踪服务。</p>
+                    <a href="services.html#air-freight" class="service-link">
+                        了解更多 <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
-                        <i class="fas fa-file-contract"></i>
+                        <i class="fas fa-file-alt"></i>
                     </div>
                     <h3>清关代理</h3>
-                    <p>专业的海关申报和清关服务，熟悉各国贸易政策，确保货物顺利通关。</p>
+                    <p>专业海关清关团队，熟悉各国贸易政策，提供报关、报检、税务等一站式清关服务。</p>
+                    <a href="services.html#customs" class="service-link">
+                        了解更多 <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-warehouse"></i>
                     </div>
                     <h3>仓储配送</h3>
-                    <p>提供专业的仓储管理和配送服务，智能化管理，高效配送网络。</p>
+                    <p>现代化智能仓储设施，提供存储、分拣、包装、配送等全方位仓储物流服务。</p>
+                    <a href="services.html#warehouse" class="service-link">
+                        了解更多 <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -131,7 +168,7 @@
                     </div>
                 </div>
                 <div class="image-content">
-                    <img src="https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="物流仓库">
+                    <img src="https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" alt="现代化物流配送中心">
                 </div>
             </div>
         </div>
