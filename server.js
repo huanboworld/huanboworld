@@ -294,7 +294,7 @@ app.post('/api/contact', formLimiter, upload.none(), contactValidation, async (r
                             <h3 style="color: #2d3748; margin-top: 0;">联系我们</h3>
                             <p><strong>客服电话:</strong> +86 400-123-4567</p>
                             <p><strong>邮箱:</strong> info@huanboworld.com</p>
-                            <p><strong>地址:</strong> 上海市浦东新区物流大道123号</p>
+                            <p><strong>地址:</strong> 营口市浦东新区物流大道123号</p>
                             <p><strong>营业时间:</strong> 周一至周日 8:00-20:00</p>
                         </div>
                         
